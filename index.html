@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceHub - AI-Powered Financial Wellness Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">💰 FinanceHub AI</div>
+        <nav>
+            <button class="nav-btn active" onclick="showSection('home', this)">Home</button>
+            <button class="nav-btn" onclick="showSection('about', this)">About Us</button>
+            <button class="nav-btn" onclick="showSection('banking', this)">Banking</button>
+            <button class="nav-btn" onclick="showSection('credit', this)">Credit</button>
+            <button class="nav-btn" onclick="showSection('insurance', this)">Insurance</button>
+            <button class="nav-btn" onclick="showSection('investing', this)">Investing</button>
+            <button class="nav-btn" onclick="showSection('ai-advisor', this)">🤖 AI Advisor</button>
+            <button id="logoutBtn" class="nav-btn logout-btn" onclick="logoutUser()" style="display:none; background-color: #e74c3c; color: white;">🚪 Logout</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Your Path to Financial Freedom</h1>
+                <p>AI-powered financial guidance to break the paycheck-to-paycheck cycle and build lasting wealth through banking, credit, insurance, and investing mastery.</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="number">63%</div>
+                    <div class="label">Americans living paycheck-to-paycheck</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">$6,956</div>
+                    <div class="label">Average household debt (excluding mortgages)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">$1.7T</div>
+                    <div class="label">Total consumer debt in the U.S.</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">42%</div>
+                    <div class="label">Cannot cover a $400 emergency</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="section">
+            <div class="about-intro">
+                <h2>About FinanceHub</h2>
+                <p>FinanceHub was founded with a revolutionary mission: to democratize financial literacy and empower every American with AI-driven insights for building wealth. In a nation where 63% live paycheck-to-paycheck and the average household carries $6,956 in debt, accessible financial guidance has become essential yet remains elusive for most.</p>
+                <p>Founders Preetham and Vidhatru witnessed intelligent, hardworking individuals trapped in debt cycles despite respectable incomes. The problem wasn't effort—it was access. Traditional financial advisors serve only the wealthy. We decided to change that by combining expert financial knowledge with artificial intelligence to provide personalized guidance accessible to everyone, solving the financial crisis facing millions of Americans.</p>
+            </div>
+
+            <div class="image-placeholder">
+                <img src="images/mission.jpg" alt="Mission: Democratizing Financial Literacy with AI">
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Why We Started</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">
+                        <img src="images/financial-crisis.jpg" alt="Financial Crisis">
+                    </div>
+                    <p>Preetham and Vidhatru grew up watching brilliant people make costly financial mistakes that derailed their wealth-building for decades. A poor credit decision cost hundreds of thousands in higher rates. Investment ignorance meant missing compound growth. Inadequate insurance left families vulnerable.</p>
+                    <p>The revelation was stark: financial success shouldn't depend on family background or expensive consultants. With the right guidance and tools, anyone can build wealth and achieve financial freedom. FinanceHub exists to provide that guidance at scale, using AI to personalize advice for millions.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Our Vision</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">
+                        <img src="images/global-access.jpg" alt="Global Financial Access">
+                    </div>
+                    <p>We envision a world where every American has access to world-class financial guidance, personalized AI analysis, and strategic tools across banking, credit, insurance, and investing.</p>
+                    <p>By combining artificial intelligence with human financial expertise, we're breaking barriers and democratizing wealth-building. Financial freedom is a fundamental right achieved through education, access, and personalized guidance—not exclusive to the wealthy.</p>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar">P</div>
+                    <h3>Preetham</h3>
+                    <div class="role">Co-Founder & Financial Strategy Expert</div>
+                    <div class="description">Deep expertise in credit strategies, wealth building, and market analysis driving our financial education initiatives.</div>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">V</div>
+                    <h3>Vidhatru</h3>
+                    <div class="role">Co-Founder & AI/Tech Lead</div>
+                    <div class="description">Technology visionary creating intuitive AI solutions and tools making complex finance accessible and actionable.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANKING SECTION -->
+        <section id="banking" class="section">
+            <div class="hero">
+                <h1>Banking Fundamentals</h1>
+                <p>Master account selection and cash flow optimization to build your financial foundation.</p>
+            </div>
+
+            <div class="image-placeholder">
+                <img src="images/banking.jpg" alt="Strategic Banking">
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Banking: The Foundation of Financial Health</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">💳 Account Types</div>
+                    <p>A robust banking strategy is the cornerstone of personal finance. The right bank account with minimal fees and competitive interest rates can save thousands annually. Many Americans lose money through excessive overdraft fees ($35 per occurrence, 12+ times yearly), minimum balance requirements, and abysmal savings rates. Strategically selecting high-yield checking, money market accounts, or savings alternatives creates a secure foundation protecting your money while it grows.</p>
+                    <p>Modern banking has evolved dramatically beyond brick-and-mortar institutions. Online banks and credit unions offer rates 10-25x higher than conventional banks, zero fees, and superior service. Understanding automatic transfers, bill pay, account linking, and FDIC insurance empowers better cash flow management and emergency fund building. Your banking decisions determine your ability to absorb financial emergencies without resorting to expensive credit, directly impacting financial stability and peace of mind.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Advanced Banking Strategies</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">📈 Savings Growth</div>
+                    <p>Strategic banking means high-yield savings (4-5% APY) for emergency funds, money market accounts for modest check-writing capability, and CDs for known future expenses. Understanding the banking ecosystem—optimal checking accounts, fee negotiation, and switching timing—saves thousands over a lifetime. Create a banking structure separating accounts by purpose: income in checking, automate transfers to high-yield savings for emergencies, and use CDs for future needs.</p>
+                    <p>Optimize account selection based on fee tolerance, transaction frequency, and desired APY. Many high-quality banks now offer competitive rates without minimums or fees. Audit your banking situation quarterly to ensure you're not leaving money on the table through poor account selection or inflexible fee structures. This simple discipline yields hundreds or thousands in annual interest and saved fees.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CREDIT SECTION -->
+        <section id="credit" class="section">
+            <div class="hero">
+                <h1>Credit Mastery</h1>
+                <p>Unlock financial opportunities through strategic credit building and score optimization.</p>
+            </div>
+
+            <div class="image-placeholder">
+                <img src="images/credit.jpg" alt="Credit Score Strategy">
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Credit: Your Financial Gateway</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">🎯 Score Optimization</div>
+                    <p>Your credit score is a powerful three-digit number controlling access to financial opportunities and determining borrowing costs. Whether securing mortgages, auto loans, credit cards, or employment, your creditworthiness determines outcomes. The average American carrying credit card debt faces 17-21% interest rates. Over a 30-year mortgage, a 1% difference (driven by credit scores) costs tens of thousands. Understanding credit scoring—payment history (35%), amounts owed (30%), credit history length (15%), credit mix (10%), new inquiries (10%)—enables strategic decisions dramatically improving scores and reducing lifetime costs.</p>
+                    <p>Building excellent credit (750+) requires disciplined financial behavior and strategic utilization. Paying bills on time (late payments drop scores 100+ points for 7 years), keeping utilization under 30%, maintaining older accounts, diversifying credit types, and minimizing inquiries positively impact scores. A higher credit score means lower rates on mortgages (saving $200,000+), auto loans, and credit cards—potentially saving hundreds of thousands over a lifetime. For those with damaged credit, understanding disputes and repair strategies provides realistic recovery paths.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Strategic Credit Building</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">📋 Credit Report Review</div>
+                    <p>Credit scores recover faster than many realize with disciplined strategies. Recent negatives lose impact over time, and one year of perfect payment history meaningfully improves scores. Obtain free credit reports at annualcreditreport.com, dispute errors, pay down high-utilization cards, and maintain perfect payment history. Secured credit cards and credit builder loans provide pathways for those starting over or recovering from mistakes, requiring collateral but reporting to bureaus for quick history building.</p>
+                    <p>Advanced strategies include becoming an authorized user on accounts in good standing, strategic account opening timing, and understanding how inquiries impact scores. Different bureaus use different models, so monitor multiple sources for comprehensive pictures. Premium credit tools provide detailed score drivers and personalized recommendations. Many raise scores 50-150 points within 6-12 months through systematic credit-building strategies, unlocking substantially better rates and opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSURANCE SECTION -->
+        <section id="insurance" class="section">
+            <div class="hero">
+                <h1>Insurance Protection</h1>
+                <p>Prevent catastrophic loss and protect your family's financial security through strategic coverage.</p>
+            </div>
+
+            <div class="image-placeholder">
+                <img src="images/insurance.jpg" alt="Insurance Strategy">
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Insurance: Protecting Your Wealth</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">🛡️ Protection Plans</div>
+                    <p>Insurance represents critical protection against catastrophic financial loss devastating finances and derailing wealth-building progress. Without proper coverage, health emergencies bankrupt families (medical debt causes 66% of personal bankruptcies), house fires wipe out net worth, accidents create devastating liability. Health insurance prevents medical bankruptcy, homeowners/renters insurance safeguards assets, auto insurance covers liability/damages, life insurance ensures family security. Insurance isn't pessimism—it's realistic risk management that strategic planning aligns with life stage, assets, and dependents.</p>
+                    <p>Young professionals often need different insurance than retirees—yet many maintain unchanged coverage for years. Regular policy reviews (annually or after major life changes) identify consolidation opportunities, better rates, and redundancy elimination. Young adults with dependents need substantial life insurance; retirees can often reduce coverage. Those with assets need umbrella liability protection. Insurance should work synergistically with banking and investments as part of comprehensive financial planning, not isolated afterthought.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Comprehensive Insurance Planning</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">📊 Coverage Analysis</div>
+                    <p>Effective insurance requires understanding policy types, coverage calculations, gaps, and personal risk tolerance. Health insurance comes in multiple forms (HMO, PPO, HDHP) with different cost structures. Homeowners insurance should cover replacement costs for your specific home. Auto insurance requires liability minimums (set by state) plus optional coverage based on car value. Life insurance should cover 8-10x annual income, adjusted for dependents and debt. Disability insurance protects your most valuable asset—your income.</p>
+                    <p>Advanced strategies include umbrella liability coverage (crucial for high-net-worth), bundling discounts, annual policy shopping (rates change), and coverage optimization. Parents should implement life insurance immediately upon having dependents. Self-employed individuals need disability insurance and business coverage. Real estate investors require specialized landlord coverage. Each situation demands customization. Premium optimization means strategic choices about deductibles, bundling, and coverage limits aligned with specific exposure—not cutting coverage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVESTING SECTION -->
+        <section id="investing" class="section">
+            <div class="hero">
+                <h1>Investment Strategy</h1>
+                <p>Build generational wealth through disciplined, long-term investing and portfolio optimization.</p>
+            </div>
+
+            <div class="image-placeholder">
+                <img src="images/investing.jpg" alt="Investment Growth">
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Investing: Building Long-Term Wealth</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">📈 Wealth Growth</div>
+                    <p>Investing transforms savings into exponential wealth through compound growth over decades—the most powerful financial force available to ordinary people. Keeping money in savings accounts loses purchasing power to inflation (2-3% annually), moving backward financially in real terms. Diversified portfolios spanning stocks, bonds, index funds, and ETFs make your money work while you sleep. Time is your greatest asset—starting at 25 versus 35 creates $500,000+ differences at retirement. An investor starting at 25 with $500/month at 7% returns accumulates $1.2M by 65, versus $650K starting at 35. Understanding asset allocation, risk tolerance, investment vehicles (401k, IRA, taxable), and diversification empowers informed decisions aligned with retirement timelines and goals.</p>
+                    <p>Real estate, retirement accounts (401k, IRA, Roth), peer-to-peer lending, and robo-advisors democratize wealth-building for middle-class Americans. Tax-advantaged accounts grow wealth dramatically—$500/monthly in a 401k at 7% returns with matching generates $2M+ by retirement while reducing taxable income. Building literacy around diversification, rebalancing, avoiding emotional decisions (panic selling), and understanding inflation-adjusted returns prevents costly mistakes. Investing isn't getting rich quick—it's disciplined, long-term commitment to systematic growth, historically delivering millionaire-status wealth to ordinary workers.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Advanced Investment Strategies</h3>
+                    <div class="image-placeholder" style="height: 160px; margin-bottom: 16px;">💼 Portfolio Management</div>
+                    <p>Investment success relies on understanding time horizon and risk tolerance. A 25-year-old with 40 years can tolerate 80-90% stock exposure; a 60-year-old with 5-10 years should shift toward bonds. Target-date funds automatically adjust allocation as retirement approaches. Dollar-cost averaging (fixed regular investments) reduces timing impact and psychology, removing burden of perfectly timing entries and exits—the most common investor mistake.</p>
+                    <p>Tax-efficient investing—leveraging 401ks, IRAs, HSAs, 529s strategically—can double or triple long-term wealth. Roth conversions, tax-loss harvesting, and strategic withdrawal ordering save hundreds of thousands. Index fund investing (S&P 500, total market, international, bonds) provides diversification with minimal fees compared to active managers. Understanding expense ratios, avoiding style drift, and maintaining discipline separate successful long-term investors from those derailed by emotion and poor decisions. Start early, invest consistently, rebalance regularly, and stay disciplined.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI ADVISOR SECTION -->
+        <section id="ai-advisor" class="section">
+            <div class="hero">
+                <h1>🤖 AI Financial Advisor</h1>
+                <p>Get personalized financial analysis and guidance powered by artificial intelligence.</p>
+            </div>
+
+            <div class="ai-advisor-container">
+                <div class="ai-chat-panel">
+                    <div class="ai-header">💬 AI Chat Support</div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">Hi! I'm your AI Financial Advisor. Provide your financial data below, and I can offer personalized financial guidance. Ask me anything about your finances!</div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="userInput" placeholder="Ask about your finances...">
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+
+                <div class="ai-analysis-panel">
+                    <div class="analysis-section">
+                        <h4>📊 Your Financial Health</h4>
+                        <div id="healthAnalysis">
+                            <div class="analysis-item">Provide your data to get analysis</div>
+                        </div>
+                    </div>
+                    <div class="analysis-section">
+                        <h4>⚠️ Key Recommendations</h4>
+                        <div id="recommendations">
+                            <div class="analysis-item">Provide your data to get recommendations</div>
+                        </div>
+                    </div>
+                    <div class="analysis-section">
+                        <h4>📈 Financial Metrics</h4>
+                        <div id="metrics">
+                            <div class="analysis-item">Provide your data to see metrics</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Input Section -->
+                <div class="data-input-section" style="margin-top: 20px;">
+                    <h4>📥 Enter Your Financial Data</h4>
+                    <form id="dataInputForm" onsubmit="processData(event)" style="max-width: 500px; margin: 0 auto;">
+                        <div class="form-group">
+                            <label>Monthly Income ($)</label>
+                            <input type="number" id="income" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Total Debts ($)</label>
+                            <input type="number" id="debts" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Credit Score</label>
+                            <input type="number" id="creditScore" min="300" max="850" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Monthly Insurance ($)</label>
+                            <input type="number" id="insurance" step="0.01" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Retirement Goal ($)</label>
+                            <input type="number" id="retirementGoal" step="0.01" min="0">
+                        </div>
+                        <button type="submit" class="save-btn" style="margin-top: 16px;">Submit Data</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINANCIAL EXPERTS SECTION -->
+        <section id="financial-experts" class="section" style="display: none;">
+            <div class="hero">
+                <h1>📍 Find Financial Experts Near You</h1>
+                <p>Explore nearby areas with financial experts to get personalized advice.</p>
+            </div>
+
+            <div class="experts-container">
+                <div id="map" style="height: 400px; width: 100%; margin-bottom: 20px;"></div>
+                <ul id="expertsList" style="list-style: none; padding: 0;">
+                    <li>Expert 1 - Address 1</li>
+                    <li>Expert 2 - Address 2</li>
+                    <li>Expert 3 - Address 3</li>
+                    <!-- Add more experts dynamically -->
+                </ul>
+            </div>
+        </section>
+
+        <script>
+            function initMap() {
+                const map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 37.7749, lng: -122.4194 }, // Default to San Francisco
+                    zoom: 12,
+                });
+
+                const locations = [
+                    { lat: 37.7749, lng: -122.4194, name: 'Expert 1' },
+                    { lat: 37.7849, lng: -122.4094, name: 'Expert 2' },
+                    { lat: 37.7649, lng: -122.4294, name: 'Expert 3' },
+                ];
+
+                locations.forEach((location) => {
+                    new google.maps.Marker({
+                        position: { lat: location.lat, lng: location.lng },
+                        map,
+                        title: location.name,
+                    });
+                });
+            }
+        </script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
