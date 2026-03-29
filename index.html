@@ -1,418 +1,497 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinanceHub - AI-Powered Financial Wellness Platform</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinanceCentral – Empowering Financial Futures</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <span class="logo-mark">FH</span>
-            <span class="logo-text">FinanceHub <span class="logo-ai">AI</span></span>
-        </div>
-        <nav>
-            <button class="nav-btn active" onclick="showSection('home', this)">Home</button>
-            <button class="nav-btn" onclick="showSection('about', this)">About Us</button>
-            <button class="nav-btn" onclick="showSection('banking', this)">Banking</button>
-            <button class="nav-btn" onclick="showSection('credit', this)">Credit</button>
-            <button class="nav-btn" onclick="showSection('insurance', this)">Insurance</button>
-            <button class="nav-btn" onclick="showSection('investing', this)">Investing</button>
-            <button class="nav-btn nav-btn--ai" onclick="showSection('ai-advisor', this)">AI Advisor</button>
-            <button id="logoutBtn" class="nav-btn nav-btn--logout" onclick="logoutUser()" style="display:none;">Logout</button>
-        </nav>
-    </header>
 
-    <div class="container">
-
-        <!-- HOME SECTION -->
-        <section id="home" class="section active">
-            <div class="hero">
-                <div class="hero-eyebrow">AI-Powered Financial Wellness</div>
-                <h1>Your Path to<br><em>Financial Freedom</em></h1>
-                <p>Break the paycheck-to-paycheck cycle and build lasting wealth through intelligent guidance in banking, credit, insurance, and investing.</p>
-                <div class="hero-cta">
-                    <button class="btn-primary" onclick="showSection('ai-advisor', document.querySelector('[onclick*=ai-advisor]'))">Get Started Free</button>
-                    <button class="btn-ghost" onclick="showSection('about', document.querySelectorAll('.nav-btn')[1])">Learn More</button>
-                </div>
-            </div>
-
-            <div class="stats-container">
-                <div class="stat-card">
-                    <div class="stat-accent"></div>
-                    <div class="number">63%</div>
-                    <div class="label">Americans living paycheck-to-paycheck</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-accent"></div>
-                    <div class="number">$6,956</div>
-                    <div class="label">Average household debt, excluding mortgages</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-accent"></div>
-                    <div class="number">$1.7T</div>
-                    <div class="label">Total consumer debt in the U.S.</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-accent"></div>
-                    <div class="number">42%</div>
-                    <div class="label">Cannot cover a $400 emergency</div>
-                </div>
-            </div>
-
-            <div class="home-features">
-                <div class="feature-card">
-                    <div class="feature-icon">🏦</div>
-                    <h3>Banking Strategy</h3>
-                    <p>Optimize accounts, eliminate fees, and put your money to work with high-yield solutions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Credit Mastery</h3>
-                    <p>Build and repair your credit score to unlock lower rates and better financial opportunities.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Insurance Planning</h3>
-                    <p>Protect your wealth with smart, comprehensive coverage tailored to your life stage.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Investment Growth</h3>
-                    <p>Grow generational wealth through disciplined, long-term investing strategies.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT US SECTION -->
-        <section id="about" class="section">
-            <div class="page-header">
-                <div class="page-eyebrow">Our Story</div>
-                <h1>About <em>FinanceHub</em></h1>
-                <p>Built by people who believe financial freedom shouldn't be a privilege.</p>
-            </div>
-
-            <div class="about-intro">
-                <div class="about-intro-text">
-                    <p>FinanceHub was founded with a revolutionary mission: to democratize financial literacy and empower every American with AI-driven insights for building wealth. In a nation where 63% live paycheck-to-paycheck and the average household carries $6,956 in debt, accessible financial guidance has become essential yet remains elusive for most.</p>
-                    <p>Founders Preetham and Vidhatru witnessed intelligent, hardworking individuals trapped in debt cycles despite respectable incomes. The problem wasn't effort — it was access. Traditional financial advisors serve only the wealthy. We decided to change that.</p>
-                </div>
-                <div class="about-intro-image">
-                    <img src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=800&q=80" alt="Financial planning and growth">
-                </div>
-            </div>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Why we started FinanceHub">
-                    </div>
-                    <h3>Why We Started</h3>
-                    <p>Preetham and Vidhatru grew up watching brilliant people make costly financial mistakes that derailed their wealth-building for decades. A poor credit decision cost hundreds of thousands in higher rates. Investment ignorance meant missing compound growth. Inadequate insurance left families vulnerable.</p>
-                    <p>Financial success shouldn't depend on family background or expensive consultants. With the right guidance, anyone can build wealth and achieve financial freedom.</p>
-                </div>
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Our vision for financial access">
-                    </div>
-                    <h3>Our Vision</h3>
-                    <p>We envision a world where every American has access to world-class financial guidance, personalized AI analysis, and strategic tools across banking, credit, insurance, and investing.</p>
-                    <p>By combining artificial intelligence with human financial expertise, we're breaking barriers and democratizing wealth-building. Financial freedom is a fundamental right — not exclusive to the wealthy.</p>
-                </div>
-            </div>
-
-            <div class="team-section">
-                <div class="section-label">The Team</div>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="avatar">P</div>
-                        <h3>Preetham</h3>
-                        <div class="role">Co-Founder & Financial Strategy Expert</div>
-                        <div class="description">Deep expertise in credit strategies, wealth building, and market analysis driving our financial education initiatives.</div>
-                    </div>
-                    <div class="team-member">
-                        <div class="avatar">V</div>
-                        <h3>Vidhatru</h3>
-                        <div class="role">Co-Founder & AI/Tech Lead</div>
-                        <div class="description">Technology visionary creating intuitive AI solutions and tools making complex finance accessible and actionable.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BANKING SECTION -->
-        <section id="banking" class="section">
-            <div class="page-header">
-                <div class="page-eyebrow">Module 01</div>
-                <h1>Banking <em>Fundamentals</em></h1>
-                <p>Master account selection and cash flow optimization to build your financial foundation.</p>
-            </div>
-
-            <div class="section-hero-image">
-                <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&q=80" alt="Strategic Banking">
-                <div class="section-hero-overlay">
-                    <span>Build Your Foundation</span>
-                </div>
-            </div>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="Bank account types and strategy">
-                    </div>
-                    <h3>Banking: The Foundation of Financial Health</h3>
-                    <p>A robust banking strategy is the cornerstone of personal finance. The right bank account with minimal fees and competitive interest rates can save thousands annually. Many Americans lose money through excessive overdraft fees ($35 per occurrence, 12+ times yearly), minimum balance requirements, and abysmal savings rates.</p>
-                    <p>Modern banking has evolved dramatically. Online banks and credit unions offer rates 10–25x higher than conventional banks, zero fees, and superior service. Your banking decisions determine your ability to absorb financial emergencies without resorting to expensive credit.</p>
-                </div>
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Savings growth strategy">
-                    </div>
-                    <h3>Advanced Banking Strategies</h3>
-                    <p>Strategic banking means high-yield savings (4–5% APY) for emergency funds, money market accounts for modest check-writing capability, and CDs for known future expenses. Create a banking structure separating accounts by purpose: income in checking, automated transfers to high-yield savings for emergencies.</p>
-                    <p>Audit your banking situation quarterly to ensure you're not leaving money on the table through poor account selection or inflexible fee structures. This simple discipline yields hundreds or thousands in annual interest and saved fees.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CREDIT SECTION -->
-        <section id="credit" class="section">
-            <div class="page-header">
-                <div class="page-eyebrow">Module 02</div>
-                <h1>Credit <em>Mastery</em></h1>
-                <p>Unlock financial opportunities through strategic credit building and score optimization.</p>
-            </div>
-
-            <div class="section-hero-image">
-                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80" alt="Credit Score Strategy">
-                <div class="section-hero-overlay">
-                    <span>Unlock Opportunity</span>
-                </div>
-            </div>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Credit score factors">
-                    </div>
-                    <h3>Credit: Your Financial Gateway</h3>
-                    <p>Your credit score is a powerful three-digit number controlling access to financial opportunities. Over a 30-year mortgage, a 1% difference driven by credit scores costs tens of thousands. Understanding credit scoring — payment history (35%), amounts owed (30%), credit history length (15%), credit mix (10%), new inquiries (10%) — enables strategic decisions.</p>
-                    <p>Building excellent credit (750+) requires disciplined financial behavior. Paying bills on time, keeping utilization under 30%, maintaining older accounts, and minimizing inquiries positively impact scores and could save you hundreds of thousands over a lifetime.</p>
-                </div>
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Credit report review">
-                    </div>
-                    <h3>Strategic Credit Building</h3>
-                    <p>Credit scores recover faster than many realize with disciplined strategies. Obtain free credit reports at annualcreditreport.com, dispute errors, pay down high-utilization cards, and maintain perfect payment history. Secured credit cards and credit builder loans provide pathways for those starting over or recovering from mistakes.</p>
-                    <p>Advanced strategies include becoming an authorized user on accounts in good standing, strategic account opening timing, and understanding how inquiries impact scores. Many raise scores 50–150 points within 6–12 months through systematic credit-building strategies.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- INSURANCE SECTION -->
-        <section id="insurance" class="section">
-            <div class="page-header">
-                <div class="page-eyebrow">Module 03</div>
-                <h1>Insurance <em>Protection</em></h1>
-                <p>Prevent catastrophic loss and protect your family's financial security through strategic coverage.</p>
-            </div>
-
-            <div class="section-hero-image">
-                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Insurance Strategy">
-                <div class="section-hero-overlay">
-                    <span>Protect What Matters</span>
-                </div>
-            </div>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Insurance protection planning">
-                    </div>
-                    <h3>Insurance: Protecting Your Wealth</h3>
-                    <p>Insurance represents critical protection against catastrophic financial loss. Without proper coverage, health emergencies bankrupt families (medical debt causes 66% of personal bankruptcies), house fires wipe out net worth, accidents create devastating liability. Insurance isn't pessimism — it's realistic risk management.</p>
-                    <p>Regular policy reviews (annually or after major life changes) identify consolidation opportunities, better rates, and redundancy elimination. Insurance should work synergistically with banking and investments as part of comprehensive financial planning.</p>
-                </div>
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80" alt="Insurance coverage analysis">
-                    </div>
-                    <h3>Comprehensive Insurance Planning</h3>
-                    <p>Effective insurance requires understanding policy types, coverage calculations, gaps, and personal risk tolerance. Life insurance should cover 8–10x annual income, adjusted for dependents and debt. Disability insurance protects your most valuable asset — your income.</p>
-                    <p>Advanced strategies include umbrella liability coverage, bundling discounts, and annual policy shopping. Each situation demands customization. Premium optimization means strategic choices about deductibles, bundling, and coverage limits aligned with your specific exposure.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- INVESTING SECTION -->
-        <section id="investing" class="section">
-            <div class="page-header">
-                <div class="page-eyebrow">Module 04</div>
-                <h1>Investment <em>Strategy</em></h1>
-                <p>Build generational wealth through disciplined, long-term investing and portfolio optimization.</p>
-            </div>
-
-            <div class="section-hero-image">
-                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80" alt="Investment Growth">
-                <div class="section-hero-overlay">
-                    <span>Grow Generational Wealth</span>
-                </div>
-            </div>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&q=80" alt="Wealth growth over time">
-                    </div>
-                    <h3>Investing: Building Long-Term Wealth</h3>
-                    <p>Investing transforms savings into exponential wealth through compound growth over decades. Time is your greatest asset — starting at 25 versus 35 creates $500,000+ differences at retirement. An investor starting at 25 with $500/month at 7% returns accumulates $1.2M by 65, versus $650K starting at 35.</p>
-                    <p>Tax-advantaged accounts grow wealth dramatically — $500/monthly in a 401k at 7% returns with matching generates $2M+ by retirement. Investing isn't getting rich quick — it's disciplined, long-term commitment to systematic growth.</p>
-                </div>
-                <div class="content-card">
-                    <div class="content-card-image">
-                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&q=80" alt="Portfolio management strategy">
-                    </div>
-                    <h3>Advanced Investment Strategies</h3>
-                    <p>Investment success relies on understanding time horizon and risk tolerance. A 25-year-old can tolerate 80–90% stock exposure; a 60-year-old should shift toward bonds. Dollar-cost averaging reduces timing impact and psychology — the most common investor mistake.</p>
-                    <p>Tax-efficient investing — leveraging 401ks, IRAs, HSAs, 529s strategically — can double or triple long-term wealth. Index fund investing provides diversification with minimal fees compared to active managers. Start early, invest consistently, rebalance regularly, and stay disciplined.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI ADVISOR SECTION -->
-        <section id="ai-advisor" class="section">
-            <div class="page-header">
-                <div class="page-eyebrow">Powered by AI</div>
-                <h1>Your Personal<br><em>Financial Advisor</em></h1>
-                <p>Get personalized financial analysis and guidance powered by artificial intelligence.</p>
-            </div>
-
-            <div class="ai-advisor-container">
-                <div class="ai-chat-panel">
-                    <div class="ai-header">
-                        <div class="ai-header-dot"></div>
-                        AI Chat Support
-                    </div>
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="message ai-message">Hi! I'm your AI Financial Advisor. Provide your financial data below, and I can offer personalized financial guidance. Ask me anything about your finances!</div>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="userInput" placeholder="Ask about your finances...">
-                        <button onclick="sendMessage()">Send</button>
-                    </div>
-                </div>
-
-                <div class="ai-analysis-panel">
-                    <div class="analysis-section">
-                        <h4>Your Financial Health</h4>
-                        <div id="healthAnalysis">
-                            <div class="analysis-item">Provide your data to get analysis</div>
-                        </div>
-                    </div>
-                    <div class="analysis-section">
-                        <h4>Key Recommendations</h4>
-                        <div id="recommendations">
-                            <div class="analysis-item">Provide your data to get recommendations</div>
-                        </div>
-                    </div>
-                    <div class="analysis-section">
-                        <h4>Financial Metrics</h4>
-                        <div id="metrics">
-                            <div class="analysis-item">Provide your data to see metrics</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="data-input-section">
-                    <h4>Enter Your Financial Data</h4>
-                    <form id="dataInputForm" onsubmit="processData(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Monthly Income ($)</label>
-                                <input type="number" id="income" step="0.01" min="0" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Total Debts ($)</label>
-                                <input type="number" id="debts" step="0.01" min="0" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Credit Score</label>
-                                <input type="number" id="creditScore" min="300" max="850" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Monthly Insurance ($)</label>
-                                <input type="number" id="insurance" step="0.01" min="0">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Retirement Goal ($)</label>
-                                <input type="number" id="retirementGoal" step="0.01" min="0">
-                            </div>
-                        </div>
-                        <button type="submit" class="save-btn">Analyze My Finances</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- FINANCIAL EXPERTS SECTION -->
-        <section id="financial-experts" class="section" style="display: none;">
-            <div class="page-header">
-                <div class="page-eyebrow">Local Experts</div>
-                <h1>Find Financial Experts <em>Near You</em></h1>
-                <p>Explore nearby areas with financial experts to get personalized advice.</p>
-            </div>
-            <div class="experts-container">
-                <div id="map"></div>
-                <ul id="expertsList" style="list-style: none; padding: 0;">
-                    <li>Expert 1 - Address 1</li>
-                    <li>Expert 2 - Address 2</li>
-                    <li>Expert 3 - Address 3</li>
-                </ul>
-            </div>
-        </section>
-
-        <script>
-            let map;
-            const chicago = { lat: 41.85, lng: -87.65 };
-            function createCenterControl(map) {
-                const controlButton = document.createElement("button");
-                controlButton.classList.add('buttonStyle');
-                controlButton.textContent = "Center Map";
-                controlButton.title = "Click to recenter the map";
-                controlButton.type = "button";
-                controlButton.addEventListener("click", () => { map.setCenter(chicago); });
-                return controlButton;
-            }
-            function initMap() {
-                map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 4,
-                    center: { lat: 49.496675, lng: -102.65625 },
-                });
-                var georssLayer = new google.maps.KmlLayer({
-                    url: "http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss",
-                });
-                georssLayer.setMap(map);
-                const centerControlDiv = document.createElement("div");
-                const centerControl = createCenterControl(map);
-                centerControlDiv.appendChild(centerControl);
-                map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
-            }
-            window.initMap = initMap;
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_API_KEY&callback=initMap&v=weekly&solution_channel=GMP_CCS_customcontrols_v2" defer></script>
+<!-- LOGIN GATE -->
+<div id="login-gate" class="gate-overlay">
+  <div class="gate-card">
+    <div class="gate-logo">
+      <div class="logo-mark">FC</div>
+      <h1>FinanceCentral</h1>
+    </div>
+    <p class="gate-sub">Your personal financial command center.</p>
+    <div class="gate-tabs">
+      <button class="gtab active" id="gtab-login" onclick="gateSwitch('login')">Sign In</button>
+      <button class="gtab" id="gtab-signup" onclick="gateSwitch('signup')">Create Profile</button>
     </div>
 
-    <script src="main.js"></script>
+    <form id="form-login" class="gate-form">
+      <div class="field-group">
+        <label>Full Name</label>
+        <input type="text" id="login-name" placeholder="Enter your name">
+      </div>
+      <div class="field-group">
+        <label>Password</label>
+        <input type="password" id="login-pass" placeholder="Enter your password">
+      </div>
+      <button type="button" onclick="doLogin()" class="btn-primary full">Sign In</button>
+      <p class="gate-err" id="login-err"></p>
+    </form>
+
+    <form id="form-signup" class="gate-form hidden">
+      <div class="field-row">
+        <div class="field-group">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" id="su-name" placeholder="Your full name">
+        </div>
+        <div class="field-group">
+          <label>Password <span class="req">*</span></label>
+          <input type="password" id="su-pass" placeholder="Create a password">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Family Status</label>
+          <input type="text" id="su-family" placeholder="e.g. Married, 2 children">
+        </div>
+        <div class="field-group">
+          <label>Annual Income ($) <span class="req">*</span></label>
+          <input type="number" id="su-income" placeholder="e.g. 75000">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Total Debts ($)</label>
+          <input type="number" id="su-debts" placeholder="e.g. 12000">
+        </div>
+        <div class="field-group">
+          <label>Credit Score (300–850)</label>
+          <input type="number" id="su-credit" placeholder="e.g. 720">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Monthly Insurance ($)</label>
+          <input type="number" id="su-insurance" placeholder="e.g. 350">
+        </div>
+        <div class="field-group">
+          <label>Target Retirement Age</label>
+          <input type="number" id="su-ret-age" placeholder="e.g. 62">
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Retirement Savings Goal ($)</label>
+        <input type="number" id="su-ret-money" placeholder="e.g. 1500000">
+      </div>
+      <button type="button" onclick="doSignup()" class="btn-primary full">Create My Profile</button>
+      <p class="gate-err" id="signup-err"></p>
+    </form>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" class="hidden">
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="logo-mark sm">FC</div>
+      <span>FinanceCentral</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active"  data-page="home">Home</a>
+      <a href="#" class="nav-link" data-page="banking">Banking</a>
+      <a href="#" class="nav-link" data-page="credit">Credit</a>
+      <a href="#" class="nav-link" data-page="insurance">Insurance</a>
+      <a href="#" class="nav-link" data-page="investing">Investing</a>
+      <a href="#" class="nav-link" data-page="ai">AI Advisor</a>
+      <a href="#" class="nav-link" data-page="profile">My Profile</a>
+      <a href="#" class="nav-link" data-page="about">About Us</a>
+    </div>
+    <div class="nav-right">
+      <div class="user-chip">
+        <div class="user-avatar" id="nav-avatar">P</div>
+        <span id="nav-name">User</span>
+      </div>
+      <button class="btn-ghost" onclick="doLogout()">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- ===== HOME ===== -->
+  <div id="page-home" class="page active">
+    <section class="hero-section">
+      <div class="hero-text">
+        <div class="hero-badge">America's Financial Operating System</div>
+        <h1 class="hero-h1">Take Control of <span class="accent">Your Financial Future</span></h1>
+        <p class="hero-sub">FinanceCentral is the all-in-one platform for banking, credit, insurance, and investing—powered by AI to make professional wealth management accessible to everyone.</p>
+        <div class="hero-ctas">
+          <button class="btn-primary" onclick="navTo('banking')">Explore Modules</button>
+          <button class="btn-ghost-dark" onclick="navTo('ai')">Get AI Advice</button>
+        </div>
+        <div class="hero-stats-row">
+          <div class="h-stat"><span class="h-stat-num">78%</span><span class="h-stat-label">of Americans live paycheck to paycheck</span></div>
+          <div class="h-stat"><span class="h-stat-num">$6.7T</span><span class="h-stat-label">in household consumer debt</span></div>
+          <div class="h-stat"><span class="h-stat-num">56%</span><span class="h-stat-label">lack a basic emergency fund</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dash-card-grid">
+          <div class="mini-card mc-blue"><div class="mc-icon">💳</div><div class="mc-label">Credit Health</div><div class="mc-val" id="home-credit-score">—</div></div>
+          <div class="mini-card mc-dark"><div class="mc-icon">📈</div><div class="mc-label">Annual Income</div><div class="mc-val" id="home-income">—</div></div>
+          <div class="mini-card mc-dark"><div class="mc-icon">🏦</div><div class="mc-label">Total Debts</div><div class="mc-val" id="home-debts">—</div></div>
+          <div class="mini-card mc-accent"><div class="mc-icon">🎯</div><div class="mc-label">Retire Goal</div><div class="mc-val" id="home-retire">—</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="pillars-section">
+      <div class="pillar-card" onclick="navTo('banking')"><div class="pillar-icon bank-icon"></div><h3>Banking</h3><p>Optimize savings, automate transfers, and eliminate hidden fees.</p></div>
+      <div class="pillar-card" onclick="navTo('credit')"><div class="pillar-icon credit-icon"></div><h3>Credit</h3><p>Build your score, eliminate debt, and unlock premium rates.</p></div>
+      <div class="pillar-card" onclick="navTo('insurance')"><div class="pillar-icon insure-icon"></div><h3>Insurance</h3><p>Protect your wealth with smart, cost-efficient coverage.</p></div>
+      <div class="pillar-card" onclick="navTo('investing')"><div class="pillar-icon invest-icon"></div><h3>Investing</h3><p>Compound your wealth with index funds and tax-advantaged accounts.</p></div>
+    </section>
+  </div>
+
+  <!-- ===== BANKING ===== -->
+  <div id="page-banking" class="page hidden">
+    <section class="sec-hero bank-hero-bg">
+      <div class="sec-hero-inner">
+        <div class="sec-tag">Financial Fundamentals</div>
+        <h1>Banking &amp; Savings Optimization</h1>
+        <p>The foundational layer of your personal financial architecture. Where wealth begins.</p>
+        <div class="sec-hero-ctas">
+          <button class="btn-primary" onclick="navTo('ai')">Get Personalized Advice</button>
+        </div>
+      </div>
+      <div class="sec-hero-stats">
+        <div class="sec-stat"><span class="sec-stat-num">0.46%</span><span class="sec-stat-lbl">Avg. savings rate at big banks</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">5.25%</span><span class="sec-stat-lbl">Top HYSA APY available today</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">$500+</span><span class="sec-stat-lbl">Extra annual interest on $10K HYSA</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">30%</span><span class="sec-stat-lbl">Higher savings with automation</span></div>
+      </div>
+    </section>
+
+    <div class="sec-body">
+      <div class="sec-intro-grid">
+        <div class="sec-intro-text">
+          <h2 class="sec-intro-h">Why Banking Strategy Matters</h2>
+          <p>Modern banking has evolved far beyond a simple repository for your paycheck. The strategic use of banking products—from high-yield savings accounts (HYSAs) to money market funds—can generate meaningful passive returns on cash that would otherwise stagnate at near-zero rates in a traditional savings account. As of recent Federal Reserve data, the national average savings rate hovers around 0.46% APY, while top-tier online banks and credit unions offer 4.5–5.25% APY on identical FDIC-insured deposits. That difference compounds dramatically over years, representing thousands of dollars in unrealized earnings most Americans unknowingly sacrifice.</p>
+          <p>Beyond interest rates, the architecture of your banking system matters enormously for behavioral discipline. Segregating accounts by purpose creates psychological spending guardrails that dramatically reduce impulse spending. Automating your financial "waterfall"—where your paycheck is immediately routed to predetermined accounts—has been shown in behavioral economics research to increase savings rates by up to 30%. This principle of "paying yourself first" is the single most proven cornerstone of wealth accumulation at any income level.</p>
+        </div>
+        <div class="sec-art bank-art">
+          <div class="art-icon">🏦</div>
+          <div class="art-label">Smart Banking</div>
+          <div class="art-sub">High-Yield · Automation · Zero Fees</div>
+          <div class="art-bars">
+            <div class="art-bar" style="height:40%;background:rgba(255,255,255,.3)"></div>
+            <div class="art-bar" style="height:65%;background:rgba(255,255,255,.5)"></div>
+            <div class="art-bar" style="height:80%;background:rgba(255,255,255,.7)"></div>
+            <div class="art-bar" style="height:55%;background:rgba(255,255,255,.5)"></div>
+            <div class="art-bar" style="height:90%;background:rgba(255,255,255,.9)"></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Key Tools &amp; Strategies</h3>
+      <div class="strategy-grid">
+        <div class="strat-card"><div class="strat-num">01</div><h4>High-Yield Savings Accounts</h4><p>Move your emergency fund to an HYSA immediately. Marcus by Goldman Sachs, Ally Bank, and SoFi offer APYs 10–12x the national average with full FDIC insurance. On a $10,000 emergency fund, this single switch generates $400–$500 in additional annual interest at zero additional risk.</p></div>
+        <div class="strat-card"><div class="strat-num">02</div><h4>Automated Paycheck Waterfall</h4><p>Set up direct deposit splits to automatically route percentages to separate accounts on payday. Recommended: 50% checking, 20% HYSA, 20% retirement/brokerage, 10% sinking fund. Automation eliminates the willpower requirement from saving entirely—the money moves before you see it.</p></div>
+        <div class="strat-card"><div class="strat-num">03</div><h4>Monthly Fee Elimination Audit</h4><p>The average American pays $150–$200/year in unnecessary banking fees: maintenance fees, ATM surcharges, and overdraft charges. Switch to a fee-free credit union or online bank, link overdraft protection to savings, and permanently eliminate these costs from your monthly ledger.</p></div>
+        <div class="strat-card"><div class="strat-num">04</div><h4>CD Laddering Strategy</h4><p>For savings goals 6–36 months out, CD laddering locks in guaranteed rates higher than HYSAs. With certificates across 3, 6, 12, and 24-month terms, you maintain rolling liquidity while capturing maximum interest on the full principal balance with zero market risk whatsoever.</p></div>
+        <div class="strat-card"><div class="strat-num">05</div><h4>Zero-Based Monthly Budgeting</h4><p>Assign every dollar of income a named purpose before the month begins—giving each dollar a "job." Using YNAB or a detailed spreadsheet, allocate income to zero so overspending in one category requires a deliberate reallocation from another. Every financial decision becomes conscious rather than reactive.</p></div>
+        <div class="strat-card"><div class="strat-num">06</div><h4>Cash-Back Checking Rewards</h4><p>Discover Cashback Debit and Axos Rewards Checking offer 1% cash back on debit purchases. For a household spending $3,000/month, this generates $360 in annual cash back with zero risk—a return on everyday spending requiring no behavioral change. Stack this with HYSA interest for amplified results.</p></div>
+      </div>
+
+      <div class="cta-banner bank-cta">
+        <div class="cta-text"><h3>Ready to optimize your banking?</h3><p>Get AI-powered analysis based on your income, spending patterns, and savings goals.</p></div>
+        <button class="btn-primary" onclick="navTo('ai')">Talk to AI Advisor →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CREDIT ===== -->
+  <div id="page-credit" class="page hidden">
+    <section class="sec-hero credit-hero-bg">
+      <div class="sec-hero-inner">
+        <div class="sec-tag">Credit &amp; Debt</div>
+        <h1>Credit Management &amp; Debt Elimination</h1>
+        <p>Your credit score is your financial reputation. Every point matters. Every dollar of debt costs you.</p>
+        <div class="sec-hero-ctas">
+          <button class="btn-primary" onclick="navTo('ai')">Analyze My Credit</button>
+        </div>
+      </div>
+      <div class="sec-hero-stats">
+        <div class="sec-stat"><span class="sec-stat-num" id="credit-hero-score">—</span><span class="sec-stat-lbl">Your current credit score</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">$130K</span><span class="sec-stat-lbl">Cost of 100-pt score gap on a mortgage</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">22%</span><span class="sec-stat-lbl">Avg. credit card APR in the U.S.</span></div>
+        <div class="sec-stat"><span class="sec-stat-num" id="credit-hero-debts">—</span><span class="sec-stat-lbl">Your current total debts</span></div>
+      </div>
+    </section>
+
+    <div class="sec-body">
+      <div class="sec-intro-grid">
+        <div class="sec-intro-text">
+          <h2 class="sec-intro-h">The True Cost of Credit Mismanagement</h2>
+          <p>Your credit score is far more than a three-digit number—it is your financial reputation, determining your access to capital and the cost of borrowing for the largest purchases in your life. A difference of 100 points in your FICO score can translate to a 1.5–2.5% difference in mortgage interest rates. On a $400,000, 30-year mortgage, that gap costs over $130,000 across the loan's lifetime. Understanding the five FICO factors—payment history (35%), credit utilization (30%), length of credit history (15%), credit mix (10%), and new credit inquiries (10%)—gives you precise levers to engineer your score upward systematically.</p>
+          <p>The strategic elimination of debt is simultaneously the fastest path to financial freedom. The average U.S. household carries over $21,000 in non-mortgage debt. High-interest revolving debt at 22% APR means every $1,000 of credit card balance costs $220 per year to simply maintain—before reducing any principal. Two powerful frameworks exist: the Debt Avalanche (highest-interest-first, mathematically optimal) and the Debt Snowball (smallest-balance-first, psychologically motivating). Both dramatically outperform minimum-payment strategies and can shave years off your debt elimination timeline.</p>
+        </div>
+        <div class="sec-art credit-art">
+          <div class="art-icon">💳</div>
+          <div class="art-label">Credit Score</div>
+          <div class="score-ring-wrap">
+            <div class="score-ring"><span id="credit-art-score">—</span></div>
+            <div class="score-ring-label">/ 850 FICO</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Key Tools &amp; Strategies</h3>
+      <div class="strategy-grid">
+        <div class="strat-card"><div class="strat-num">01</div><h4>The Debt Avalanche Method</h4><p>List all debts by interest rate, highest to lowest. Make minimum payments on all, then direct every extra dollar toward the highest-rate balance until eliminated, then cascade down. Mathematically optimal—this method saves the most total interest across the full payoff period.</p></div>
+        <div class="strat-card"><div class="strat-num">02</div><h4>Credit Utilization Engineering</h4><p>Utilization accounts for 30% of your FICO score. Keeping it below 10% (not just 30%) is the optimal scoring threshold. Request limit increases without spending more, pay balances before the statement closing date—not just the due date—and spread spending across multiple cards.</p></div>
+        <div class="strat-card"><div class="strat-num">03</div><h4>0% APR Balance Transfers</h4><p>Many issuers offer 15–21 months at 0% APR on balance transfers for a 3–5% one-time fee. Moving $5,000 from 22% APR saves ~$1,100 in interest in 15 months (even after the fee). Divide the balance by the promo months and pay that exact amount each month to zero it out.</p></div>
+        <div class="strat-card"><div class="strat-num">04</div><h4>Annual Credit Report Audits</h4><p>You are legally entitled to one free report from each of three major bureaus (Equifax, Experian, TransUnion) via AnnualCreditReport.com. Stagger one bureau every four months—effectively monitoring your credit four times a year at zero cost. Dispute errors in writing via certified mail.</p></div>
+        <div class="strat-card"><div class="strat-num">05</div><h4>Authorized User Strategy</h4><p>Being added to a family member's older, well-maintained card immediately imports its full positive history to your profile. Especially powerful for thin credit files or post-financial-difficulty rebuilding. Benefits typically appear on your report within 30 days of being added.</p></div>
+        <div class="strat-card"><div class="strat-num">06</div><h4>Strategic Rewards Card Use</h4><p>Using credit cards for all regular spending—then paying the balance in full monthly—earns 1.5–5% in rewards with zero interest cost, builds credit history, and provides purchase protection. Chase Sapphire Preferred and Citi Double Cash are among the highest-value cards with no complex redemption structures.</p></div>
+      </div>
+
+      <div class="cta-banner credit-cta">
+        <div class="cta-text"><h3>Want a personalized debt elimination plan?</h3><p>The AI Advisor analyzes your actual debts, income, and credit score to build a step-by-step strategy.</p></div>
+        <button class="btn-primary" onclick="navTo('ai')">Get My Debt Plan →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== INSURANCE ===== -->
+  <div id="page-insurance" class="page hidden">
+    <section class="sec-hero insure-hero-bg">
+      <div class="sec-hero-inner">
+        <div class="sec-tag">Risk Management</div>
+        <h1>Insurance &amp; Wealth Protection</h1>
+        <p>The fortress that stands between your financial position and total devastation. One event changes everything.</p>
+        <div class="sec-hero-ctas">
+          <button class="btn-primary" onclick="navTo('ai')">Review My Coverage</button>
+        </div>
+      </div>
+      <div class="sec-hero-stats">
+        <div class="sec-stat"><span class="sec-stat-num">66%</span><span class="sec-stat-lbl">of U.S. bankruptcies linked to medical costs</span></div>
+        <div class="sec-stat"><span class="sec-stat-num" id="insure-hero-monthly">—</span><span class="sec-stat-lbl">Your monthly insurance spend</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">$800</span><span class="sec-stat-lbl">Potential annual savings by rate shopping</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">1-in-4</span><span class="sec-stat-lbl">Chance of disability before retirement</span></div>
+      </div>
+    </section>
+
+    <div class="sec-body">
+      <div class="sec-intro-grid">
+        <div class="sec-intro-text">
+          <h2 class="sec-intro-h">Insurance Is Not a Bill — It Is a Shield</h2>
+          <p>Insurance is not merely a monthly obligation—it is the risk-transfer mechanism that stands between your financial position and total devastation. A single uninsured medical emergency, house fire, or at-fault auto accident can generate hundreds of thousands in liability costs that eradicate decades of savings within a single event. Nearly 66% of personal bankruptcies in the United States are tied to healthcare costs, and most of those filing were insured inadequately, not uninsured. Understanding coverage adequacy, deductible optimization, and premium efficiency is not optional—it is foundational to financial survivability.</p>
+          <p>The goal of insurance optimization is not maximum coverage, but exactly the coverage that shields your financial position from catastrophic losses—not merely inconvenient ones. High deductible plans reduce monthly premiums and make you the efficient payer of smaller, predictable costs while offloading truly damaging large claims to the insurer. A Health Savings Account (HSA) paired with a High Deductible Health Plan (HDHP) creates a triple-tax-advantaged vehicle that grows tax-free for medical expenses, simultaneously reducing your premium burden while creating a powerful supplementary retirement vehicle most Americans overlook.</p>
+        </div>
+        <div class="sec-art insure-art">
+          <div class="art-icon">🛡️</div>
+          <div class="art-label">Protection Shield</div>
+          <div class="art-sub">Life · Health · Auto · Home</div>
+          <div class="art-shield">
+            <div class="shield-ring r1"></div>
+            <div class="shield-ring r2"></div>
+            <div class="shield-ring r3"></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Key Tools &amp; Strategies</h3>
+      <div class="strategy-grid">
+        <div class="strat-card"><div class="strat-num">01</div><h4>HSA + HDHP Power Combination</h4><p>Triple-tax advantage: pre-tax contributions, tax-free growth, and tax-free withdrawals for medical expenses. Contribute up to $4,150 (individual) or $8,300 (family) in 2024. Invest HSA funds in index funds and pay current medical bills out-of-pocket when possible—let the HSA compound for decades tax-free.</p></div>
+        <div class="strat-card"><div class="strat-num">02</div><h4>Term Life Over Whole Life</h4><p>For individuals with dependents, term provides 10–30x more coverage per premium dollar than whole life. A healthy 30-year-old secures a 20-year, $1 million term policy for ~$35/month. "Buy term and invest the rest" consistently outperforms whole life's embedded investment component across any meaningful time horizon.</p></div>
+        <div class="strat-card"><div class="strat-num">03</div><h4>Annual Rate Shopping</h4><p>Insurance companies impose "loyalty penalties"—long-tenured customers are charged incrementally higher premiums each renewal cycle. Requesting competing quotes for auto and home coverage annually routinely surfaces savings of $300–$800/year. Your current insurer will typically match or beat the competing offer rather than lose your business.</p></div>
+        <div class="strat-card"><div class="strat-num">04</div><h4>Umbrella Liability Policy</h4><p>For individuals with assets over $200,000, a personal umbrella policy provides $1–$5 million in additional liability coverage above your auto and home limits for just $150–$300/year. It activates when a lawsuit exceeds your underlying limits—protecting investment accounts and future income from garnishment entirely.</p></div>
+        <div class="strat-card"><div class="strat-num">05</div><h4>Disability Insurance (The Hidden Risk)</h4><p>A 35-year-old has a 1-in-4 probability of disability lasting 90+ days before retirement—yet disability insurance is consistently the most overlooked coverage. Verify your employer's LTD plan replaces at least 60% of gross income. If not, secure an individual "own-occupation" policy that pays if you cannot perform your specific work.</p></div>
+        <div class="strat-card"><div class="strat-num">06</div><h4>Deductible Optimization Analysis</h4><p>Calculate your break-even on deductibles: annual premium savings ÷ deductible increase. If an HDHP saves $600/year and raises your deductible $1,500, you break even in 2.5 years without any claims. Fund the deductible difference immediately in your HSA or HYSA so you are never caught unprepared for a covered event.</p></div>
+      </div>
+
+      <div class="cta-banner insure-cta">
+        <div class="cta-text"><h3>Is your insurance spend optimized?</h3><p>The AI Advisor evaluates your monthly insurance cost against your income and suggests concrete savings opportunities.</p></div>
+        <button class="btn-primary" onclick="navTo('ai')">Audit My Insurance →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== INVESTING ===== -->
+  <div id="page-investing" class="page hidden">
+    <section class="sec-hero invest-hero-bg">
+      <div class="sec-hero-inner">
+        <div class="sec-tag">Wealth Building</div>
+        <h1>Investing &amp; Long-Term Wealth Creation</h1>
+        <p>The compounding engine that transforms earned income into generational financial independence.</p>
+        <div class="sec-hero-ctas">
+          <button class="btn-primary" onclick="navTo('ai')">Build My Investment Plan</button>
+        </div>
+      </div>
+      <div class="sec-hero-stats">
+        <div class="sec-stat"><span class="sec-stat-num">10.5%</span><span class="sec-stat-lbl">S&P 500 avg. annualized return (100 yrs)</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">7.2 yrs</span><span class="sec-stat-lbl">Time to double money at 10% returns</span></div>
+        <div class="sec-stat"><span class="sec-stat-num">$2.6M</span><span class="sec-stat-lbl">Result of $500/mo at age 25 to 65</span></div>
+        <div class="sec-stat"><span class="sec-stat-num" id="invest-hero-retire">—</span><span class="sec-stat-lbl">Your retirement savings goal</span></div>
+      </div>
+    </section>
+
+    <div class="sec-body">
+      <div class="sec-intro-grid">
+        <div class="sec-intro-text">
+          <h2 class="sec-intro-h">Why Time in the Market Wins Every Time</h2>
+          <p>Investing is the process of deploying capital into assets that generate returns over time—allowing your money to earn additional money without requiring additional labor from you. The power of compound interest cannot be overstated: at a 10% average annual return (the historical average of the S&P 500), money doubles approximately every 7.2 years. A 25-year-old investing $500/month until age 65 accumulates approximately $2.6 million—of which over $2.3 million represents pure investment returns, not personal contributions. Delaying this to age 35 drops the ending balance to under $1 million despite identical monthly contributions. Time in the market is the decisive, irreversible variable.</p>
+          <p>The investment landscape today offers unprecedented accessibility. Low-cost index funds from Vanguard, Fidelity, and Schwab allow any individual to own diversified positions in hundreds of companies for expense ratios as low as 0.03% annually—a transformative shift from the 1%+ fees of actively managed funds. When combined with tax-advantaged retirement accounts (401k, Roth IRA, HSA), the after-tax compounding effect creates wealth trajectories accessible to middle-income earners that genuinely produce financial independence when started early and maintained consistently through market cycles without panic selling.</p>
+        </div>
+        <div class="sec-art invest-art">
+          <div class="art-icon">📈</div>
+          <div class="art-label">Portfolio Growth</div>
+          <div class="art-sub">S&amp;P 500 · Roth IRA · Index Funds</div>
+          <div class="art-line">
+            <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" width="100%" height="80px">
+              <polyline points="0,55 20,47 35,40 50,30 65,22 85,12 100,7 120,3" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <polygon points="0,60 0,55 20,47 35,40 50,30 65,22 85,12 100,7 120,3 120,60" fill="rgba(255,255,255,0.12)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Key Tools &amp; Strategies</h3>
+      <div class="strategy-grid">
+        <div class="strat-card"><div class="strat-num">01</div><h4>Maximize the 401(k) Employer Match</h4><p>The employer match is the highest guaranteed return in personal finance. If your employer matches 50% up to 6% of salary, you receive a guaranteed 50% return before investment gains. On a $70,000 salary, this means $2,100 in free money annually. Never leave it uncaptured—this takes absolute priority over all other financial goals.</p></div>
+        <div class="strat-card"><div class="strat-num">02</div><h4>Roth IRA: Tax-Free Wealth</h4><p>After-tax contributions grow entirely tax-free; qualified withdrawals after 59½ are taxed at 0%—including all gains. The 2024 limit is $7,000/year. A Roth opened at 25 with $7,000/year at 10% average returns accumulates to ~$3.4 million by 65. No Required Minimum Distributions make it uniquely flexible for estate planning.</p></div>
+        <div class="strat-card"><div class="strat-num">03</div><h4>S&amp;P 500 Index Fund Investing</h4><p>The Vanguard S&P 500 ETF (VOO) or Fidelity ZERO Large Cap Index Fund provides diversified ownership in America's 500 largest companies at 0.03%–0.00% expense ratio. Over any 20-year rolling period in history, the S&P 500 has delivered positive returns 100% of the time with ~10.5% annualized average gains.</p></div>
+        <div class="strat-card"><div class="strat-num">04</div><h4>Dollar-Cost Averaging (DCA)</h4><p>Investing a fixed amount on a set schedule regardless of market conditions means buying more shares when cheap and fewer when expensive. Research consistently shows DCA outperforms waiting for "the right time to invest"—which statistically results in missing the market's best-performing days. Automate it on payday so it is completely effortless.</p></div>
+        <div class="strat-card"><div class="strat-num">05</div><h4>Asset Allocation by Time Horizon</h4><p>Portfolio composition should reflect your time until withdrawal. The "110 minus your age" rule gives your equity percentage (e.g., at 30: 80% stocks, 20% bonds). Within 5–10 years of retirement, gradually shift toward stable assets to protect against a severe downturn at the worst possible moment before withdrawals begin.</p></div>
+        <div class="strat-card"><div class="strat-num">06</div><h4>Tax-Loss Harvesting</h4><p>Sell taxable positions at a loss to realize a capital loss, then immediately reinvest in a similar (but not "substantially identical") security to maintain exposure. Capital losses offset gains dollar-for-dollar, and up to $3,000 of excess losses offset ordinary income annually, with unused losses carrying forward indefinitely into future tax years.</p></div>
+      </div>
+
+      <div class="cta-banner invest-cta">
+        <div class="cta-text"><h3>On track for your retirement goal?</h3><p>The AI Advisor calculates exactly how much to invest monthly to hit your target retirement number on schedule.</p></div>
+        <button class="btn-primary" onclick="navTo('ai')">Model My Retirement →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AI ADVISOR ===== -->
+  <div id="page-ai" class="page hidden">
+    <div class="ai-layout">
+      <div class="ai-panel-left">
+        <div class="ai-header-block">
+          <h2>AI Financial Advisor</h2>
+          <p>Personalized guidance based on your real financial profile. Ask anything.</p>
+        </div>
+        <div id="ai-feedback-snapshot" class="feedback-snapshot"></div>
+      </div>
+      <div class="ai-panel-right">
+        <div class="chat-window">
+          <div class="chat-messages-area" id="chat-messages">
+            <div class="chat-msg ai-msg">
+              <div class="chat-avatar-ai">FC</div>
+              <div class="chat-bubble">Hello! I am your FinanceCentral AI Advisor. I have analyzed your financial profile and I am ready to provide personalized guidance on banking, credit, insurance, and investing strategies. What would you like to know?</div>
+            </div>
+          </div>
+          <form class="chat-input-row" id="chat-form" onsubmit="return false;">
+            <input type="text" id="chat-input" placeholder="Ask about your finances..." autocomplete="off">
+            <button type="button" onclick="sendChat()" class="btn-send">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MY PROFILE ===== -->
+  <div id="page-profile" class="page hidden">
+    <div class="profile-wrapper">
+      <h2 class="page-title">My Financial Profile</h2>
+      <p class="page-sub">Your information is stored securely on your local device only.</p>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-avatar-area">
+            <div class="profile-big-avatar" id="prof-big-avatar">P</div>
+            <h2 id="prof-display-name">—</h2>
+            <p id="prof-display-family" class="muted">—</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <h3>Financial Snapshot</h3>
+          <div class="data-list">
+            <div class="data-row"><span>Annual Income</span><strong id="prof-show-income">—</strong></div>
+            <div class="data-row"><span>Total Debts</span><strong id="prof-show-debts">—</strong></div>
+            <div class="data-row"><span>Credit Score</span><strong id="prof-show-credit">—</strong></div>
+            <div class="data-row"><span>Monthly Insurance</span><strong id="prof-show-insurance">—</strong></div>
+            <div class="data-row"><span>Target Retirement Age</span><strong id="prof-show-ret-age">—</strong></div>
+            <div class="data-row"><span>Retirement Goal</span><strong id="prof-show-ret-money">—</strong></div>
+          </div>
+        </div>
+        <div class="profile-card full-width">
+          <h3>Update Profile</h3>
+          <div class="update-grid">
+            <div class="field-group"><label>Full Name</label><input type="text" id="upd-name"></div>
+            <div class="field-group"><label>Family Status</label><input type="text" id="upd-family"></div>
+            <div class="field-group"><label>Annual Income ($)</label><input type="number" id="upd-income"></div>
+            <div class="field-group"><label>Total Debts ($)</label><input type="number" id="upd-debts"></div>
+            <div class="field-group"><label>Credit Score</label><input type="number" id="upd-credit"></div>
+            <div class="field-group"><label>Monthly Insurance ($)</label><input type="number" id="upd-insurance"></div>
+            <div class="field-group"><label>Retirement Age</label><input type="number" id="upd-ret-age"></div>
+            <div class="field-group"><label>Retirement Goal ($)</label><input type="number" id="upd-ret-money"></div>
+            <div class="field-group"><label>New Password (blank = keep current)</label><input type="password" id="upd-pass"></div>
+            <button type="button" onclick="doUpdateProfile()" class="btn-primary full">Save Changes</button>
+          </div>
+          <p id="upd-success" class="success-msg hidden">Profile updated and saved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT US ===== -->
+  <div id="page-about" class="page hidden">
+    <div class="about-wrapper">
+      <section class="about-hero">
+        <img src="founders_hero.png" alt="Preetham Thippana and Vidhatru Kotha" class="about-hero-img">
+        <div class="about-hero-overlay">
+          <h1>Built by Two Students Who Refused to Accept Financial Ignorance</h1>
+          <p>Preetham Thippana &amp; Vidhatru Kotha — Co-Founders, FinanceCentral</p>
+        </div>
+      </section>
+      <section class="stats-banner">
+        <div class="stat-tile"><div class="stat-big">78%</div><div class="stat-desc">of Americans live paycheck to paycheck — across all income levels</div></div>
+        <div class="stat-tile"><div class="stat-big">$6.7T</div><div class="stat-desc">in total U.S. household consumer debt at record highs</div></div>
+        <div class="stat-tile"><div class="stat-big">66%</div><div class="stat-desc">of U.S. bankruptcies linked to inadequate insurance coverage</div></div>
+        <div class="stat-tile"><div class="stat-big">56%</div><div class="stat-desc">of Americans have less than $1,000 in emergency savings</div></div>
+        <div class="stat-tile"><div class="stat-big">$1.77T</div><div class="stat-desc">in student loan debt affecting over 43 million Americans</div></div>
+      </section>
+      <section class="about-narrative">
+        <div class="narrative-block">
+          <h2>The Problem We Saw</h2>
+          <p>We are Preetham and Vidhatru—two students who grew up watching intelligent, hardworking people struggle with money. Not because they were careless, but because no one ever taught them the rules of the financial system they were playing in. The education system teaches calculus but not compound interest. It teaches world history but not how to read a credit report. This gap is not accidental—and the consequences are devastating on a national scale.</p>
+          <p>The data paints an undeniable picture: 78% of Americans live paycheck to paycheck according to a 2024 LendingClub and PYMNTS report—and this includes people earning $100,000 or more annually. The problem is not income. The problem is the absence of a structured financial operating system. Without one, even high earners fall into the same traps: growing consumer debt, inadequate insurance, zero investment, and no retirement trajectory.</p>
+        </div>
+        <div class="narrative-block">
+          <h2>Why We Built FinanceCentral</h2>
+          <p>FinanceCentral was built on one conviction: that access to high-quality, jargon-free, personalized financial guidance should not be a privilege reserved for people who can afford a $200/hour financial advisor. Every American deserves a clear, actionable financial roadmap that accounts for their specific situation and delivers it in plain language they can act on today.</p>
+          <p>Preetham brings a data-driven analytical approach rooted in computational thinking, while Vidhatru brings a deep passion for financial systems and economic equity. Together, we designed FinanceCentral to cut through the noise—no sales pitches, no commissions, no conflicts of interest. Just rigorous, honest, personalized financial strategy delivered by an AI that actually reads your profile. Our goal: to be the financial co-pilot that the 78% of Americans living paycheck to paycheck never had access to. Until now.</p>
+        </div>
+        <div class="founders-row">
+          <div class="founder-card">
+            <div class="founder-avatar">PT</div>
+            <h3>Preetham Thippana</h3>
+            <p class="founder-title">Co-Founder &amp; Lead Developer</p>
+            <p>Passionate about using technology to solve real-world financial inequities. Specializes in data systems, applied AI, and financial modeling.</p>
+          </div>
+          <div class="founder-card">
+            <div class="founder-avatar">VK</div>
+            <h3>Vidhatru Kotha</h3>
+            <p class="founder-title">Co-Founder &amp; Strategy Lead</p>
+            <p>Driven by a mission to democratize financial literacy. Specializes in personal finance strategy, consumer economics, and product design.</p>
+          </div>
+        </div>
+        <div class="mission-box">
+          <h3>Our Mission</h3>
+          <p>To empower every American with the knowledge, tools, and personalized AI strategy needed to escape the paycheck-to-paycheck cycle, eliminate debt, build credit, protect their family, and achieve financial independence—regardless of their starting point.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</div><!-- END #app -->
+
+<script src="main.js"></script>
 </body>
 </html>
-```
